@@ -59,6 +59,12 @@ void disp_umid(); //mostrar a umidade relativa do ar
 int    temperatura = 0x00,   //armazena a temperatura
        umidade     = 0x00,   //armazena a umidade
        counter     = 0x00;   //contador auxiliar
+//===================================================================================
+int redpin=5;      //Pin 9
+int greenpin=2;    //Pin 10
+int bluepin=15;      //Pin 11
+int var=0;
+int var1=0;
 
 
 
@@ -82,7 +88,7 @@ void setup()   {
 void loop() {
 
   int sensorValue = analogRead(34);
-  float voltage = sensorValue * (3.16 / 4096.0);
+  float voltage = sensorValue * (3.16 / 4095.0);
 
      my_dht.read11(dht_pin);
 
@@ -120,7 +126,45 @@ void loop() {
   delay(2000);
 
 
-
+//=============================================================
+//RGB
+  for(var=250;var<255;var++)
+  {
+  analogWrite(redpin,var);  //RED
+  analogWrite(greenpin,0);
+  delay(500);
+  analogWrite(redpin,0);    //GREEN
+  analogWrite(greenpin,var);
+  delay(500);
+  analogWrite(greenpin,0);   //BLUE
+  analogWrite(bluepin,var);
+  delay(500);
+  analogWrite(bluepin,0);
+  delay(500);
+  }
+  /*
+  for(var1=250;var1<255;var1++)
+  {
+  analogWrite(redpin,var1);   //YELLOW
+  analogWrite(greenpin,var1);
+  delay(500);
+  analogWrite(redpin,0);
+  delay(500);
+  analogWrite(greenpin,var1);  //CYAN
+  analogWrite(bluepin,var1);
+  delay(500);
+  analogWrite(greenpin,0);
+  delay(500);
+  analogWrite(bluepin,var1);    //MAGENTA
+  analogWrite(redpin,var1);
+  delay(500);
+  analogWrite(bluepin,0);
+  delay(500);
+  analogWrite(bluepin,var1);
+  analogWrite(redpin,var1);
+  analogWrite(greenpin,var1);
+  */
+  }
 
    
   Serial.println(voltage);
