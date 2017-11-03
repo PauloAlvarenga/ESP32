@@ -70,12 +70,12 @@ Vamos indicar as suas principais características em mais detalhes:
 ## Instruções de Instalação
 
 1. Download e Instale a [Arduino IDE](https://www.arduino.cc/en/Main/Software). 
-1. Abra a página [Espressif ESP32](https://github.com/espressif/arduino-esp32/blob/master/README.md#installation-instructions "Instalation Instructions ") e siga as instruções para o seu sistema operacional. 
-1. Instale o [driver](http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx) para garantir que a placa se comunique corretamente com o seu PC
-1. Conecte a placa ao seu PC usando um cabo micro-usb
-1. Selecione a placa no caminho “Tools/Board ESP32 Dev Module" dentro da IDE do Arduino.
-1. Altere a Upload Speed para 115,200 bauds!
-1. Selecione a porta COM correspondente.
+2. Abra a página [Espressif ESP32](https://github.com/espressif/arduino-esp32/blob/master/README.md#installation-instructions "Instalation Instructions ") e siga as instruções para o seu sistema operacional. 
+3. Instale o [driver](http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx) para garantir que a placa se comunique corretamente com o seu PC
+4. Conecte a placa ao seu PC usando um cabo micro-usb
+5. Selecione a placa no caminho “Tools/Board ESP32 Dev Module" dentro da IDE do Arduino.
+6. Altere a Upload Speed para 115,200 bauds!
+7. Selecione a porta COM correspondente.
 
 ## Descobertas
 Vou compartilhar as descobertas e desafios que eu encontrar na pasta abaixo, pode ser que algo seja útil para o seu projeto:
@@ -94,3 +94,10 @@ A vezes para programar a  ESP32 via serial você deve manter o em nível baixo d
 
 [Arduino core for the ESP32](https://github.com/espressif/arduino-esp32)
 
+[HT-Deko](http://ht-deko.com/arduino/esp-wroom-32.html)
+
+[ESP32](http://esp32.net/)
+
+[Livro ESP-32](https://leanpub.com/kolban-ESP32)
+
+[MGO Tec](https://www.mgo-tec.com/tag/esp32)

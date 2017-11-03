@@ -58,10 +58,10 @@ Keypad keypad = Keypad( makeKeymap(keys), rowPins, colPins, ROWS, COLS );
 //============================================================================================
 //=== DTH ===
 
-dht   my_dht;                           //objeto para o DHT11
+dht   DTH;                           //objeto para o DHT11
 
 // --- Mapeamento de Hardware ---
-#define    dht_pin    22   //pino de sinal do dht11 
+#define    dht11_pin    22   //pino de sinal do dht11 
 
 // --- Protótipo das Funções ---
 void disp_temp(); //mostrar a temperatura em Graus Celsius
@@ -90,12 +90,10 @@ void loop() {
 
 //============================================================================================
 //===LEITURA DO KEYPAD===
- char key = keypad.getKey();
-  
+ char key = keypad.getKey(); 
   if (key){
-    Serial.println(key);
+  Serial.println(key);
   }
-
 //============================================================================================
 //===LEITURA DO VOLTIMETRO===
 
@@ -105,10 +103,10 @@ void loop() {
 //============================================================================================
 //===LEITURA DO DTH===
 
-   my_dht.read11(dht_pin);
-
-   temperatura = my_dht.temperature;
-   umidade     = my_dht.humidity;
+   DTH.read11(dht11_pin);
+   
+  temperatura = DTH.temperature;
+  umidade     = DTH.humidity;
 
   
 //============================================================================================
@@ -132,15 +130,13 @@ void loop() {
     u8g2.drawStr(105,45,"C");
     u8g2.setCursor(68, 45);
     u8g2.print(temperatura);
-    
-    u8g2.drawStr(0,60,"Hello World!");
+
   } while ( u8g2.nextPage() );
   delay(400);
 
 
   Serial.println(voltage);
   Serial.println(sensorValue);
- 
   Serial.print(temperatura);
   Serial.println(" C");
   Serial.print(umidade);
