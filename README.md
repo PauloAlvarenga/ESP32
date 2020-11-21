@@ -71,7 +71,7 @@ Vamos indicar as suas principais características em mais detalhes:
 
 1. Download e Instale a [Arduino IDE](https://www.arduino.cc/en/Main/Software). 
 2. Abra a página [Espressif ESP32](https://github.com/espressif/arduino-esp32/blob/master/README.md#installation-instructions "Instalation Instructions ") e siga as instruções para o seu sistema operacional. 
-3. Instale o [driver](http://www.silabs.com/products/mcu/pages/usbtouartbridgevcpdrivers.aspx) para garantir que a placa se comunique corretamente com o seu PC
+3. Instale o [driver](https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers) para garantir que a placa se comunique corretamente com o seu PC
 4. Conecte a placa ao seu PC usando um cabo micro-usb
 5. Selecione a placa no caminho “Tools/Board ESP32 Dev Module" dentro da IDE do Arduino.
 6. Altere a Upload Speed para 115,200 bauds!
